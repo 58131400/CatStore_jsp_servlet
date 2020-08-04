@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>CatStore</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+   <servlet-mapping>
+  <servlet-name>default</servlet-name>
+  <url-pattern>*.css</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+  <servlet-name>default</servlet-name>
+  <url-pattern>*.js</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+  <servlet-name>default</servlet-name>
+  <url-pattern>*.woff</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+  <servlet-name>default</servlet-name>
+  <url-pattern>*.woff2</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+  <servlet-name>default</servlet-name>
+  <url-pattern>*.png</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+  <servlet-name>default</servlet-name>
+  <url-pattern>*.jpg</url-pattern>
+</servlet-mapping>
+<servlet>
+		<servlet-name>Logout</servlet-name>
+		<servlet-class>admin.controller.LogoutController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Admin</servlet-name>
+		<servlet-class>admin.controller.DashboardController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Admin</servlet-name>
+		<url-pattern>/admin/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Products</servlet-name>
+		<servlet-class>admin.controller.ProductsController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Products</servlet-name>
+		<url-pattern>/admin/products/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ProductDetail</servlet-name>
+		<servlet-class>admin.controller.ProductDetailController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductDetail</servlet-name>
+		<url-pattern>/admin/products/detail</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ProductEdit</servlet-name>
+		<servlet-class>admin.controller.ProductEditController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductEdit</servlet-name>
+		<url-pattern>/admin/products/edit</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ProductDelete</servlet-name>
+		<servlet-class>admin.controller.ProductDeleteController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductDelete</servlet-name>
+		<url-pattern>/admin/products/delete</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ProductCreate</servlet-name>
+		<servlet-class>admin.controller.ProductCreateController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductCreate</servlet-name>
+		<url-pattern>/admin/products/create</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Authorization</servlet-name>
+		<servlet-class>admin.controller.UserAuthorizationController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Authorization</servlet-name>
+		<url-pattern>/admin/users/authorization</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Orders</servlet-name>
+		<servlet-class>admin.controller.OrdersController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Orders</servlet-name>
+		<url-pattern>/admin/orders/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>OrdersEdit</servlet-name>
+		<servlet-class>admin.controller.OrdersEditController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrdersEdit</servlet-name>
+		<url-pattern>/admin/orders/edit</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>OrdersCreate</servlet-name>
+		<servlet-class>admin.controller.OrdersCreateController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrdersCreate</servlet-name>
+		<url-pattern>/admin/orders/create</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>OrdersDelete</servlet-name>
+		<servlet-class>admin.controller.OrdersDeleteController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrdersDelete</servlet-name>
+		<url-pattern>/admin/orders/delete</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>OrdersDetail</servlet-name>
+		<servlet-class>admin.controller.OrdersDetailController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrdersDetail</servlet-name>
+		<url-pattern>/admin/orders/detail</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>NoPermission</servlet-name>
+		<servlet-class>admin.controller.NoPermissionController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NoPermission</servlet-name>
+		<url-pattern>/admin/no-permission</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Customers</servlet-name>
+		<servlet-class>admin.controller.CustomersController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Customers</servlet-name>
+		<url-pattern>/admin/customers/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CustomerDetail</servlet-name>
+		<servlet-class>admin.controller.CustomerDetailController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CustomerDetail</servlet-name>
+		<url-pattern>/admin/customers/detail</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CustomerEdit</servlet-name>
+		<servlet-class>admin.controller.CustomerEditController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CustomerEdit</servlet-name>
+		<url-pattern>/admin/customers/edit</url-pattern>
+	</servlet-mapping>
+</web-app>
